@@ -1,0 +1,13 @@
+/* yeseva-one-regular - latin */
+@font-face {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('yeseva-one-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Yeseva One'), local('YesevaOne'),
+  url('yeseva-one-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('yeseva-one-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('yeseva-one-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('yeseva-one-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('yeseva-one-v10-latin-regular.svg#YesevaOne') format('svg'); /* Legacy iOS */
+}

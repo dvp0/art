@@ -1,0 +1,13 @@
+/* crete-round-regular - latin */
+@font-face {
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url('crete-round-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Crete Round'), local('CreteRound-Regular'),
+  url('crete-round-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('crete-round-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('crete-round-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('crete-round-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('crete-round-v5-latin-regular.svg#CreteRound') format('svg'); /* Legacy iOS */
+}

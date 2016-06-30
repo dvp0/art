@@ -1,0 +1,13 @@
+/* copse-regular - latin */
+@font-face {
+  font-family: 'Copse';
+  font-style: normal;
+  font-weight: 400;
+  src: url('copse-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Copse'),
+  url('copse-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('copse-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('copse-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('copse-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('copse-v6-latin-regular.svg#Copse') format('svg'); /* Legacy iOS */
+}

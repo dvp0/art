@@ -1,0 +1,13 @@
+/* norican-regular - latin */
+@font-face {
+  font-family: 'Norican';
+  font-style: normal;
+  font-weight: 400;
+  src: url('norican-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Norican Regular'), local('Norican-Regular'),
+  url('norican-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('norican-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('norican-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('norican-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('norican-v4-latin-regular.svg#Norican') format('svg'); /* Legacy iOS */
+}

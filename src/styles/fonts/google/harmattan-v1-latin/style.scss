@@ -1,0 +1,13 @@
+/* harmattan-regular - latin */
+@font-face {
+  font-family: 'Harmattan';
+  font-style: normal;
+  font-weight: 400;
+  src: url('harmattan-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Harmattan'), local('Harmattan-Regular'),
+  url('harmattan-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('harmattan-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('harmattan-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('harmattan-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('harmattan-v1-latin-regular.svg#Harmattan') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,13 @@
+/* ek-mukta-regular - latin */
+@font-face {
+  font-family: 'Ek Mukta';
+  font-style: normal;
+  font-weight: 400;
+  src: url('ek-mukta-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ek Mukta'), local('EkMukta-Regular'),
+  url('ek-mukta-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('ek-mukta-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('ek-mukta-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('ek-mukta-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('ek-mukta-v7-latin-regular.svg#EkMukta') format('svg'); /* Legacy iOS */
+}
