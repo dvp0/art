@@ -35562,7 +35562,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".title {\n  font-family: 'Kaushan Script';\n  font-size: 40px; }\n  .title span.dull {\n    opacity: 0.5; }\n\n.white-background {\n  background: white; }\n\n.sectionOneWrapper {\n  padding: 23em 0; }\n", ""]);
+	exports.push([module.id, ".title {\n  font-family: 'Kaushan Script';\n  font-size: 40px; }\n  .title span.dull {\n    opacity: 0.5; }\n\n.white-background {\n  background: white; }\n\n.sectionOneWrapper {\n  padding: 22em 0; }\n", ""]);
 	
 	// exports
 
@@ -35731,7 +35731,7 @@
 	                        ),
 	                        _react2.default.createElement(
 	                            'text',
-	                            { 'text-anchor': 'middle', x: '38%', y: '25%', dy: '1em', fill: 'url(#fire)', fontSize: '10' },
+	                            { x: '38%', y: '25%', dy: '1em', fill: 'url(#fire)', fontSize: '10' },
 	                            'art of engineer in',
 	                            _react2.default.createElement(
 	                                'span',
@@ -35795,7 +35795,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".sectionsTwoWrapper {\n  padding: 0em 0; }\n", ""]);
+	exports.push([module.id, ".sectionTwoWrapper {\n  padding: 0em 0; }\n", ""]);
 	
 	// exports
 

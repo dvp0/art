@@ -31,7 +31,7 @@ class Section1 extends React.Component {
                                 <stop id="endColorTwo" stopColor="white" offset="100%"/>
                             </linearGradient>
                         </defs>
-                        <text text-anchor="middle" x="38%" y="25%" dy="1em" fill="url(#fire)" fontSize="10">art of engineer
+                        <text x="38%" y="25%" dy="1em" fill="url(#fire)" fontSize="10">art of engineer
                             in
                             <span className="dull">g</span>
                         </text>
