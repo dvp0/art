@@ -1,8 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {SectionsContainer, Section} from 'react-fullpage';
 
-require('styles/header');
+let $ = require('jquery');
+const full = require('fullpage.js');
+$.fullpage = full;
+
+require('styles/index');
 require('styles/fonts/google/abril-fatface-v8-latin/style');
 require('styles/fonts/google/bree-serif-v5-latin/style');
 require('styles/fonts/google/copse-v6-latin/style');
@@ -16,41 +19,41 @@ require('styles/fonts/google/norican-v4-latin/style');
 require('styles/fonts/google/yeseva-one-v10-latin/style');
 require('styles/fonts/google/yesteryear-v5-latin/style');
 
-const Section1 = require('sections/sections1.jsx');
+const SectionOne = require('./components/sections/SectionOne.jsx');
+const SectionTwo = require('./components/sections/SectionTwo.jsx');
 
 class App extends React.Component {
-    render() {
-        let settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        };
 
+    componentDidMount() {
         let options = {
             sectionClassName:     'section',
-            anchors:              ['sectionOne', 'sectionTwo', 'sectionThree'],
+            anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
             scrollBar:            false,
             navigation:           true,
             verticalAlign:        true,
             sectionPaddingTop:    '50px',
             sectionPaddingBottom: '50px',
+            delay:                600,
             arrowNavigation:      true
         };
+        $('#fullpage').fullpage(options);
+    };
 
+    render() {
         return (
-            <div>
-                <SectionsContainer className="container-body" {...options}>
-                    <Section className="custom-section text-center" verticalAlign="true" color="white" textAlign="center">
-                        <Section1>artofengineer.in</Section1>
-                    </Section>
-                    <Section color="#A7DBD8">
-                    </Section>
-                    <Section color="#E0E4CC">Page 3</Section>
-                </SectionsContainer>
+            <div id="fullpage">
+                <div className="section">
+                    <SectionOne></SectionOne>
+                </div>
+                <div className="section">
+                    <SectionTwo></SectionTwo>
+                </div>
+                <div className="section">
+                </div>
+                <div className="section">
+                </div>
             </div>
-        );
+        )
     }
 }
 
