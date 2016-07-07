@@ -1,16 +1,25 @@
 .title {
   font-family: 'Kaushan Script';
   font-size: 40px;
+  color: white;
+  position: relative;
 
   span.dull {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 }
 
-.white-background {
-  background: white;
+.title {
+  top: 40%;
+  margin: 0px;
+}
+
+.titleWrapper {
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .sectionOneWrapper {
-  padding: 23em 0;
+  //padding: 23em 0;
 }

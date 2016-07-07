@@ -9,15 +9,16 @@ class Section1 extends React.Component {
     startGradient() {
 
         let gradient = new Gradient({
-            // startSelector: '#startColorTwo',
-            // endSelector: '#endColorTwo',
-            // cssGradientSelector: '.sectionTwoWrapper',
+            startSelector: '#startColorTwo',
+            endSelector: '#endColorTwo',
             gradientSpeed: 0.005
         });
+
+        gradient.start();
     }
 
     componentDidMount() {
-        // this.startGradient();
+        this.startGradient();
     }
 
     render() {
@@ -31,9 +32,11 @@ class Section1 extends React.Component {
                                 <stop id="endColorTwo" stopColor="white" offset="100%"/>
                             </linearGradient>
                         </defs>
-                        <text x="38%" y="25%" dy="1em" fill="url(#fire)" fontSize="10">art of engineer
-                            in
-                            <span className="dull">g</span>
+                        <text x="38%"
+                              y="25%"
+                              text-anchor="middle"
+                              fontSize="10">
+                            Works
                         </text>
                     </svg>
                 </div>

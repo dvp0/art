@@ -9,11 +9,13 @@ class Section1 extends React.Component {
     startGradient() {
 
         let gradient = new Gradient({
-            startSelector: '#startColorOne',
-            endSelector: '#endColorOne',
+            // startSelector: '#startColorOne',
+            // endSelector: '#endColorOne',
             cssGradientSelector: '.sectionOneWrapper',
             gradientSpeed: 0.005
         });
+
+        gradient.start();
     }
 
     componentDidMount() {
@@ -21,23 +23,18 @@ class Section1 extends React.Component {
     }
 
     render() {
+        const top = ($(window).height() / 2 ) - 25;
+        const styles = { top: top };
+
         return (
             <div className="sectionOneWrapper section-wrapper">
-                <div className="white-background">
-                    <div className="title">
-                            <svg viewBox="0 0 300 30">
-                                <defs>
-                                    <linearGradient id="fire">
-                                        <stop id="startColorOne" stopColor="white" offset="0%"/>
-                                        <stop id="endColorOne" stopColor="white" offset="100%"/>
-                                    </linearGradient>
-                                </defs>
-                                <text text-anchor="middle" x="38%" y="25%" dy="1em" fill="url(#fire)" fontSize="10">art of engineer
-                                    in
-                                    <span className="dull">g</span>
-                                </text>
-                            </svg>
-                    </div>
+                <div className="titleWrapper">
+                    <h1 className="title" style={styles}>
+                        art of engineer
+                        <span className="dull">.</span>
+                        in
+                        <span className="dull">g</span>
+                    </h1>
                 </div>
             </div>
         )

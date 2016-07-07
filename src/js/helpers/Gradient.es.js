@@ -22,6 +22,10 @@ class Gradient {
 
         this.step = 0;
 
+    }
+
+    start() {
+        const self = this;
         this.updateGradient();
         this.interval = setInterval(function () {
             self.updateGradient();
@@ -31,7 +35,10 @@ class Gradient {
     updateGradient () {
 
         const options = this.options;
-        if ( $ === undefined ) {return};
+        if ( $ === undefined ) {
+            console.error('jquery is required for ');
+            return;
+        };
 
         var c0_0 = this.colors[this.colorIndices[0]];
         var c0_1 = this.colors[this.colorIndices[1]];
@@ -49,12 +56,19 @@ class Gradient {
         var b2 = Math.round(istep * c1_0[2] + this.step * c1_1[2]);
         var color2 = "rgb("+r2+","+g2+","+b2+")";
 
-        $(options.startSelector).attr('stop-color', color1);
-        $(options.endSelector).attr('stop-color', color2);
+        if (options.startSelector) {
+            $(options.startSelector).attr('stop-color', color1);
+        }
+        if (options.endSelector) {
+            $(options.endSelector).attr('stop-color', color2);
+        }
+        if (options.cssGradientSelector) {
 
-        $(options.cssGradientSelector)
-            .css({ background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"})
-            .css({ background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"});
+            $(options.cssGradientSelector)
+                .css({ background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"})
+                .css({ background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"});
+
+        }
 
         this.step += this.gradientSpeed;
         if ( this.step >= 1 )
