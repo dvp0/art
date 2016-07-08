@@ -21,6 +21,7 @@ require('styles/fonts/google/yesteryear-v5-latin/style');
 
 const SectionOne = require('./components/sections/SectionOne.jsx');
 const SectionTwo = require('./components/sections/SectionTwo.jsx');
+const SectionThree = require('./components/sections/SectionThree.jsx');
 
 class App extends React.Component {
 
@@ -49,6 +50,8 @@ class App extends React.Component {
                     <SectionTwo></SectionTwo>
                 </div>
                 <div className="section">
+                    <SectionThree></SectionThree>
+
                 </div>
                 <div className="section">
                 </div>

@@ -18,6 +18,8 @@
     "file-loader": "^0.9.0",
     "fullpage.js": "^2.8.1",
     "img-loader": "^1.2.2",
+    "random-js": "^1.0.8",
+    "random-string": "^0.1.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-slick": "^0.12.2",

@@ -15,7 +15,7 @@ var config = {
     },
     resolve: {
         root: APP_DIR,
-        extensions: ['', '.js', '.scss']
+        extensions: ['', '.js', '.scss', '.jsx']
     },
     module : {
         loaders : [
