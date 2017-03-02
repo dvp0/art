@@ -28,7 +28,7 @@ class App extends React.Component {
     componentDidMount() {
         let options = {
             sectionClassName:     'section',
-            anchors:              ['', 'works', 'about', 'resume'],
+            anchors:              ['', 'works', 'about'],
             scrollBar:            false,
             navigation:           true,
             verticalAlign:        true,
@@ -51,8 +51,6 @@ class App extends React.Component {
                 </div>
                 <div className="section">
                     <SectionThree></SectionThree>
-                </div>
-                <div className="section">
                 </div>
             </div>
         )
