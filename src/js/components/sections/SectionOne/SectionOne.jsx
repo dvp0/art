@@ -3,7 +3,7 @@ const Gradient = require('../../../helpers/Gradient.es.js');
 const classNames = require('classnames');
 import React from 'react';
 
-const styles = require('styles/components/sectionOne');
+const styles = require('./style');
 const commonStyles = require('styles/common');
 
 class Section1 extends React.Component {
@@ -24,7 +24,7 @@ class Section1 extends React.Component {
     }
 
     render() {
-        const top = ($(window).height() / 2 ) - 55;
+        const top = ($(window).height() / 2 ) - 25;
         const localStyles = { top: top };
 
         return (

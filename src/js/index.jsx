@@ -20,8 +20,8 @@ require('styles/index');
 require('styles/fonts/google/kaushan-script-v5-latin/style');
 
 const SectionOne = require('./components/sections/SectionOne/SectionOne.jsx');
-const SectionTwo = require('./components/sections/SectionTwo.jsx');
-const SectionThree = require('./components/sections/SectionThree.jsx');
+const SectionTwo = require('./components/sections/SectionTwo/SectionTwo.jsx');
+const SectionThree = require('./components/sections/SectionThree/SectionThree.jsx');
 
 class App extends React.Component {
 
