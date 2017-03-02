@@ -43,7 +43,7 @@ class PageTitle extends React.Component {
     render() {
         const textFillRef = 'url(#' + this.state.defID + ')';
         return (
-            <div>
+            <div className={commonStyles.svgWrapper}>
                 <svg className={commonStyles.pageTitleSvg} viewBox="0 0 100 30">
                     <defs>
                         <linearGradient id={this.state.defID}>
@@ -63,7 +63,7 @@ class PageTitle extends React.Component {
                     <rect height="1"
                           width="10"
                           x="45"
-                          y="17"
+                          y="20"
                           fill="black">
                     </rect>
                 </svg>

@@ -11,7 +11,6 @@ class Section extends React.Component {
         return (
             <div className={classNames(commonStyles.sectionWrapper)}>
                 <PageTitle titleText="About"></PageTitle>
-                <div className="well text-center">Coming soon</div>
             </div>
         )
     }
