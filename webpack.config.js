@@ -1,44 +1,74 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'pub/');
-var APP_DIR = path.resolve(__dirname, 'src/');
+var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-    entry: APP_DIR + '/js/index.jsx',
+    entry: {
+        main: APP_DIR + '/js/index.jsx'
+    },
     cache: true,
-    debug: true,
+    devtool: "cheap-eval-source-map",
     output: {
-        path: BUILD_DIR + '/c/js/',
+        path: BUILD_DIR + '/c/',
         filename: 'bundle.js',
-        publicPath: './pub/c/js/'
+        publicPath: '/'
     },
     resolve: {
-        root: APP_DIR,
-        extensions: ['', '.js', '.scss', '.jsx']
+        modules: [APP_DIR, "node_modules"],
+        extensions: ['.js', '.scss', '.jsx']
     },
-    module : {
-        loaders : [
+    module: {
+        rules: [
             {
-                test : /\.(jsx|es.js)?/,
-                include : APP_DIR,
-                loader : 'babel'
+                test: /\.html$/,
+                loader: 'html-loader'
             },
             {
-                test: /\.scss$/,
-                include : APP_DIR,
-                loaders: ['style', 'css', 'sass']
+                test: /\.(jsx|es.js)?/,
+                include: APP_DIR,
+                loader: 'babel-loader'
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file?name=/pub/fonts/[name].[ext]'
+                loader: 'file-loader?name=fonts/[name].[ext]'
             },
             {
                 test: /\.(jpe?g|png|gif)$/i,
                 loader: 'url-loader'
+            },
+            {
+                test: /\.scss$/,
+                include: APP_DIR,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "sass-loader" // compiles Sass to CSS
+                }]
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: "Art Of Engineering",
+            hash: true,
+            cache: true,
+            showErrors: true
+        })
+        // ,
+        // new BundleAnalyzerPlugin({
+        //     openAnalyzer: false
+        // })
+    ]
 };
 
 module.exports = config;

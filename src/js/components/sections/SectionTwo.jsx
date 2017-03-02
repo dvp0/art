@@ -1,14 +1,15 @@
 const $ = require('jquery');
-import React from 'react';
+const classNames = require('classnames');
+const React = require('react');
 
-require('styles/components/sectionTwo');
+const commonStyles = require('styles/common');
 const PageTitle = require('../shared/PageTitle.jsx');
 
 class Section extends React.Component {
 
     render() {
         return (
-            <div className="sectionTwoWrapper section-wrapper">
+            <div className={classNames(commonStyles.sectionWrapper)}>
                 <PageTitle titleText="Works"></PageTitle>
             </div>
         )

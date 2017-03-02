@@ -1,0 +1,15 @@
+:local(.sectionWrapper) {
+  height: 100%;
+}
+
+:local(.pageTitleSvg) {
+  width: 500px;
+  display: block;
+  margin: auto;
+}
+
+:local(.pageTitleText) {
+  font-size: 8px;
+  font-weight: bold;
+  font-family: 'Helvetica';
+}

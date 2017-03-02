@@ -6,20 +6,20 @@ const full = require('fullpage.js');
 $.fullpage = full;
 
 require('styles/index');
-require('styles/fonts/google/abril-fatface-v8-latin/style');
-require('styles/fonts/google/bree-serif-v5-latin/style');
-require('styles/fonts/google/copse-v6-latin/style');
-require('styles/fonts/google/crete-round-v5-latin/style');
-require('styles/fonts/google/damion-v6-latin/style');
-require('styles/fonts/google/ek-mukta-v7-latin/style');
-require('styles/fonts/google/harmattan-v1-latin/style');
-require('styles/fonts/google/jomhuria-v2-latin/style');
+// require('styles/fonts/google/abril-fatface-v8-latin/style');
+// require('styles/fonts/google/bree-serif-v5-latin/style');
+// require('styles/fonts/google/copse-v6-latin/style');
+// require('styles/fonts/google/crete-round-v5-latin/style');
+// require('styles/fonts/google/damion-v6-latin/style');
+// require('styles/fonts/google/ek-mukta-v7-latin/style');
+// require('styles/fonts/google/harmattan-v1-latin/style');
+// require('styles/fonts/google/jomhuria-v2-latin/style');
+// require('styles/fonts/google/norican-v4-latin/style');
+// require('styles/fonts/google/yeseva-one-v10-latin/style');
+// require('styles/fonts/google/yesteryear-v5-latin/style');
 require('styles/fonts/google/kaushan-script-v5-latin/style');
-require('styles/fonts/google/norican-v4-latin/style');
-require('styles/fonts/google/yeseva-one-v10-latin/style');
-require('styles/fonts/google/yesteryear-v5-latin/style');
 
-const SectionOne = require('./components/sections/SectionOne.jsx');
+const SectionOne = require('./components/sections/SectionOne/SectionOne.jsx');
 const SectionTwo = require('./components/sections/SectionTwo.jsx');
 const SectionThree = require('./components/sections/SectionThree.jsx');
 
@@ -28,7 +28,7 @@ class App extends React.Component {
     componentDidMount() {
         let options = {
             sectionClassName:     'section',
-            anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour'],
+            anchors:              ['', 'works', 'about', 'resume'],
             scrollBar:            false,
             navigation:           true,
             verticalAlign:        true,
@@ -51,7 +51,6 @@ class App extends React.Component {
                 </div>
                 <div className="section">
                     <SectionThree></SectionThree>
-
                 </div>
                 <div className="section">
                 </div>
@@ -61,5 +60,5 @@ class App extends React.Component {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    render(<App/>, document.getElementById('artofengineerin'));
+    render(<App/>, $('body')[0]);
 });
